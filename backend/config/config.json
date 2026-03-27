@@ -1,0 +1,79 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "./database/database.sqlite",
+    "logging": false,
+    "pool": {
+      "max": 20,
+      "min": 5,
+      "acquire": 30000,
+      "idle": 10000
+    },
+    "define": {
+      "timestamps": true
+    },
+    "dialectOptions": {
+      "timeout": 30000,
+      "pragma": {
+        "journal_mode": "WAL",
+        "synchronous": "NORMAL",
+        "cache_size": 10000,
+        "temp_store": "MEMORY",
+        "mmap_size": 268435456,
+        "page_size": 4096,
+        "locking_mode": "EXCLUSIVE"
+      }
+    }
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": "./database/database.sqlite",
+    "logging": false,
+    "pool": {
+      "max": 10,
+      "min": 2,
+      "acquire": 30000,
+      "idle": 10000
+    },
+    "define": {
+      "timestamps": true
+    },
+    "dialectOptions": {
+      "timeout": 30000,
+      "pragma": {
+        "journal_mode": "WAL",
+        "synchronous": "NORMAL",
+        "cache_size": 5000,
+        "temp_store": "MEMORY"
+      }
+    }
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "./database/database.sqlite",
+    "logging": false,
+    "pool": {
+      "max": 50,
+      "min": 10,
+      "acquire": 60000,
+      "idle": 30000
+    },
+    "define": {
+      "timestamps": true
+    },
+    "dialectOptions": {
+      "timeout": 60000,
+      "pragma": {
+        "journal_mode": "WAL",
+        "synchronous": "NORMAL",
+        "cache_size": 20000,
+        "temp_store": "MEMORY",
+        "mmap_size": 536870912,
+        "page_size": 4096,
+        "locking_mode": "EXCLUSIVE",
+        "foreign_keys": "ON",
+        "auto_vacuum": "INCREMENTAL"
+      }
+    }
+  }
+}
