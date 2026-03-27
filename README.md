@@ -54,7 +54,7 @@ Automated timetable generation desktop application for **ISTA (Institut Spécial
 ```bash
 # Clone
 git clone https://github.com/Elmahdijaouali/Timetable-Generator-ISTA.git
-cd Timetable-Generator-ISTA/fullproject
+cd Timetable-Generator-ISTA
 
 # Install
 npm install
@@ -89,15 +89,23 @@ npm run dev
 
 SQLite: `backend/database/database.sqlite`
 
-Key tables: `Administrators`, `Branches`, `Modules`, `Formateurs`, `Classrooms`, `Groups`, `GroupModuleFormateurs`, `Timetables`, `Sessions`, `FormateurTimetables`, `Merges`, `Tranings`, `Settings`, `GenerationReports`
+Key tables: `Administrators`, `Branches`, `Modules`, `Formateurs`, `Classrooms`, `Groups`, `GroupModuleFormateurs`, `Timetables`, `Sessions`, `FormateurTimetables`, `Merges`, `Tranings`, `Settings`
 
 ---
 
 ## Environment
 
+### for developpement
 `backend/.env`:
 ```env
 NODE_ENV=development
+PORT=8002
+JWT_SECRET=your-secret-key
+```
+### for prduction use : 
+`backend/.env`:
+```env
+NODE_ENV=production
 PORT=8002
 JWT_SECRET=your-secret-key
 ```
