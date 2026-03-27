@@ -57,6 +57,7 @@
     "productName": "Timetable Generator",
     "files": [
       "dist/",
+      "dist-electron/",
       "backend/",
       "electron/",
       "node_modules/",
